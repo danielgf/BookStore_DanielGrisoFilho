@@ -84,7 +84,7 @@ struct AccessInfo: Codable {
     var publicDomain: Bool?
     var textToSpeechPermission: String?
     var epub: Epub?
-    var pdf: Pdf?
+    var pdf: PdfInfo?
     var webReaderLink: String?
     var accessViewStatus: String?
     var quoteSharingAllowed: Bool?
@@ -94,7 +94,7 @@ struct Epub: Codable {
     var isAvailable: Bool?
 }
 
-struct Pdf: Codable {
+struct PdfInfo: Codable {
     var isAvailable: Bool?
 }
 

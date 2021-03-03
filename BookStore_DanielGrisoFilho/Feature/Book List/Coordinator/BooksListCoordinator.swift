@@ -9,7 +9,7 @@
 
 import UIKit
 
-class BooksListCoordinator {
+class BooksListCoordinator: Coordinator {
     
     var navigationController: UINavigationController?
     
