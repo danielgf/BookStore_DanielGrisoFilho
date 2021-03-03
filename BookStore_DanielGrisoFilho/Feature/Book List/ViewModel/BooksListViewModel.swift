@@ -18,7 +18,7 @@ class BooksListViewModel {
     // MARK: - Properties
     let service: BooksListService
     
-    fileprivate var books: BooksList = BooksList()
+    fileprivate var books: [Books] = [Books]()
     
     // MARK: - Init
     init(service: BooksListService = BooksListService()) {
@@ -35,7 +35,7 @@ class BooksListViewModel {
         service.fetchBooks(endPoint: "books", page: page) { (result) in
             switch result {
             case .success(let book):
-                self.books = book
+                self.books.append(contentsOf: book)
                 self.viewDelegate?.updateScreen()
             case .failure(let error):
                 self.viewDelegate?.showError(error: error)
@@ -47,16 +47,16 @@ class BooksListViewModel {
 extension BooksListViewModel: BooksListViewModelType {
     
     func numberOfItems() -> Int {
-        return books.items?.count ?? 0
+        return books.count
     }
     
     func itemFor(row: Int) -> Books {
-        let item = books.items?[row]
-        return item ?? Books()
+        let item = books[row]
+        return item
     }
     
     func didSelectRow(_ row: Int, from controller: UIViewController) {
-        let bookSelected = books.items?[row] ?? Books()
+        let bookSelected = books[row]
         coordinatorDelegate?.didSelect(model: bookSelected, from: controller)
     }
     

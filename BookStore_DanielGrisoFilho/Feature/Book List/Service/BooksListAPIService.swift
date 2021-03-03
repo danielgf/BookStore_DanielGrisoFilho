@@ -13,5 +13,5 @@ import UIKit
 /// to get the data from the server
 protocol BooksListAPIService {
     func fetchBooks(endPoint: String, page: Int,
-                    completionHandler: @escaping (Result<BooksList, Error>) -> Void)
+                    completionHandler: @escaping (Result<[Books], Error>) -> Void)
 }

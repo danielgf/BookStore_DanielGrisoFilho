@@ -25,7 +25,7 @@ class BooksListCollectionViewController: UICollectionViewController, UICollectio
         
     override func viewDidLoad() {
         super.viewDidLoad()
-        viewModel?.start(page: requestPage)
+        fetchBooks(page: requestPage)
         setupNavigationBar()
         registerCells()
     }
@@ -39,6 +39,10 @@ class BooksListCollectionViewController: UICollectionViewController, UICollectio
     
     private func setupNavigationBar() {
         title = "Book Store"
+    }
+    
+    private func fetchBooks(page: Int) {
+        viewModel?.start(page: requestPage)
     }
     
     // MARK: - UICollectionViewDataSource
@@ -71,11 +75,19 @@ class BooksListCollectionViewController: UICollectionViewController, UICollectio
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-            let padding: CGFloat =  60
-            let collectionViewSize = collectionView.frame.size.width - padding
-
-            return CGSize(width: collectionViewSize/2, height: collectionViewSize/2)
+        let padding: CGFloat =  60
+        let collectionViewSize = collectionView.frame.size.width - padding
+        
+        return CGSize(width: collectionViewSize/2, height: collectionViewSize/2)
+    }
+    
+    override func collectionView(_ collectionView: UICollectionView, willDisplay cell: UICollectionViewCell, forItemAt indexPath: IndexPath) {
+        if indexPath.row + 3 == viewModel?.numberOfItems() {
+            requestPage += 1
+            fetchBooks(page: requestPage)
         }
+    }
+    
 }
 // MARK: - Conforming to BooksListViewModelViewDelegate protocol
 extension BooksListCollectionViewController: BooksListViewModelViewDelegate {

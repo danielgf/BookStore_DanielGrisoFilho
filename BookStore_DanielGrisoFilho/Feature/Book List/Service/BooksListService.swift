@@ -17,7 +17,7 @@ class BooksListService: BooksListAPIService {
     
     init() {}
     
-    func fetchBooks(endPoint: String, page: Int, completionHandler: @escaping (Result<BooksList, Error>) -> Void) {
+    func fetchBooks(endPoint: String, page: Int, completionHandler: @escaping (Result<[Books], Error>) -> Void) {
         
         let url = "\(BooksListService.baseURL)\(endPoint)\(BooksListService.pathURL)"
         let parameters = [
@@ -44,7 +44,7 @@ class BooksListService: BooksListAPIService {
             
             do {
                 let result = try JSONDecoder().decode(BooksList.self, from: safeData)
-                completionHandler(.success(result))
+                completionHandler(.success(result.items ?? []))
             } catch {
                 completionHandler(.failure(error))
             }

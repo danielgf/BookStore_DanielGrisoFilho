@@ -36,7 +36,7 @@ class BooksListServiceSpec: XCTestCase {
 }
 
 class BooksListServiceMock: BooksListAPIService {
-    func fetchBooks(endPoint: String, page: Int, completionHandler: @escaping (Result<BooksList, Error>) -> Void) {
+    func fetchBooks(endPoint: String, page: Int, completionHandler: @escaping (Result<[Books], Error>) -> Void) {
         guard let url = Bundle.main.url(forResource: "BooksListMock", withExtension: ".json") else {
             completionHandler(.failure(NSError(domain: "failed parse url",
                                                code: 0, userInfo: nil)))
@@ -46,7 +46,7 @@ class BooksListServiceMock: BooksListAPIService {
             
             let jsonData = try Data(contentsOf: url)
             let result = try JSONDecoder().decode(BooksList.self, from: jsonData)
-            completionHandler(.success(result))
+            completionHandler(.success(result.items ?? []))
         } catch {
             completionHandler(.failure(error))
         }
