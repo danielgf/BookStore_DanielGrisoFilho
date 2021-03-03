@@ -12,5 +12,6 @@ import UIKit
 /// This protocol you will input all the functions that you wanto to perform a request
 /// to get the data from the server
 protocol BooksListAPIService {
-    
+    func fetchBooks(endPoint: String, page: Int,
+                    completionHandler: @escaping (Result<BooksList, Error>) -> Void)
 }

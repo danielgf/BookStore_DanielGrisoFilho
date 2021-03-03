@@ -21,7 +21,10 @@ class BooksListCoordinator {
         let storyboard = UIStoryboard(name: BooksListCollectionViewController.classIdentifier,
                                       bundle: nil)
         let viewController = storyboard.instantiateViewController(identifier:
-                                                                    BooksListCollectionViewController.classIdentifier)
+                                                                    BooksListCollectionViewController
+                                                                    .classIdentifier)
+            as BooksListCollectionViewController
+        viewController.viewModel = BooksListViewModel()
         navigationController?
             .pushViewController(viewController,
                                 animated: true)
