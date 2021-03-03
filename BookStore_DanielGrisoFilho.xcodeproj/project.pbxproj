@@ -7,10 +7,20 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9C057A0425EF1448004BFFCB /* MainCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C057A0325EF1448004BFFCB /* MainCoordinator.swift */; };
+		9C057A0F25EF1500004BFFCB /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C057A0E25EF1500004BFFCB /* Coordinator.swift */; };
+		9C057A1825EF17A4004BFFCB /* BooksListCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C057A1725EF17A4004BFFCB /* BooksListCollectionViewController.swift */; };
+		9C057A1E25EF17C3004BFFCB /* BooksListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C057A1D25EF17C3004BFFCB /* BooksListViewModel.swift */; };
+		9C057A2425EF17D7004BFFCB /* BooksList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C057A2325EF17D7004BFFCB /* BooksList.swift */; };
+		9C057A2A25EF1845004BFFCB /* BooksListProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C057A2925EF1845004BFFCB /* BooksListProtocol.swift */; };
+		9C057A3125EF187A004BFFCB /* BooksListAPIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C057A2F25EF187A004BFFCB /* BooksListAPIService.swift */; };
+		9C057A3225EF187A004BFFCB /* BooksListService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C057A3025EF187A004BFFCB /* BooksListService.swift */; };
+		9C057A3E25EF1933004BFFCB /* BooksListCollectionViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9C057A3D25EF1933004BFFCB /* BooksListCollectionViewController.storyboard */; };
+		9C057A6225EF1DF0004BFFCB /* BooksListCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C057A6025EF1DF0004BFFCB /* BooksListCollectionViewCell.swift */; };
+		9C057A6325EF1DF0004BFFCB /* BooksListCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9C057A6125EF1DF0004BFFCB /* BooksListCollectionViewCell.xib */; };
+		9C057A8425EF2105004BFFCB /* BooksListCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C057A8325EF2105004BFFCB /* BooksListCoordinator.swift */; };
 		9C3515CC25ED7984002947EC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C3515CB25ED7984002947EC /* AppDelegate.swift */; };
 		9C3515CE25ED7984002947EC /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C3515CD25ED7984002947EC /* SceneDelegate.swift */; };
-		9C3515D025ED7984002947EC /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C3515CF25ED7984002947EC /* ViewController.swift */; };
-		9C3515D325ED7984002947EC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9C3515D125ED7984002947EC /* Main.storyboard */; };
 		9C3515D525ED7985002947EC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9C3515D425ED7985002947EC /* Assets.xcassets */; };
 		9C3515D825ED7985002947EC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9C3515D625ED7985002947EC /* LaunchScreen.storyboard */; };
 		9C3515E325ED7985002947EC /* BookStore_DanielGrisoFilhoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C3515E225ED7985002947EC /* BookStore_DanielGrisoFilhoTests.swift */; };
@@ -35,11 +45,21 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		9C057A0325EF1448004BFFCB /* MainCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainCoordinator.swift; sourceTree = "<group>"; };
+		9C057A0E25EF1500004BFFCB /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
+		9C057A1725EF17A4004BFFCB /* BooksListCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BooksListCollectionViewController.swift; sourceTree = "<group>"; };
+		9C057A1D25EF17C3004BFFCB /* BooksListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BooksListViewModel.swift; sourceTree = "<group>"; };
+		9C057A2325EF17D7004BFFCB /* BooksList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BooksList.swift; sourceTree = "<group>"; };
+		9C057A2925EF1845004BFFCB /* BooksListProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BooksListProtocol.swift; sourceTree = "<group>"; };
+		9C057A2F25EF187A004BFFCB /* BooksListAPIService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BooksListAPIService.swift; sourceTree = "<group>"; };
+		9C057A3025EF187A004BFFCB /* BooksListService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BooksListService.swift; sourceTree = "<group>"; };
+		9C057A3D25EF1933004BFFCB /* BooksListCollectionViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = BooksListCollectionViewController.storyboard; sourceTree = "<group>"; };
+		9C057A6025EF1DF0004BFFCB /* BooksListCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BooksListCollectionViewCell.swift; sourceTree = "<group>"; };
+		9C057A6125EF1DF0004BFFCB /* BooksListCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BooksListCollectionViewCell.xib; sourceTree = "<group>"; };
+		9C057A8325EF2105004BFFCB /* BooksListCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BooksListCoordinator.swift; sourceTree = "<group>"; };
 		9C3515C825ED7984002947EC /* BookStore_DanielGrisoFilho.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BookStore_DanielGrisoFilho.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9C3515CB25ED7984002947EC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9C3515CD25ED7984002947EC /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		9C3515CF25ED7984002947EC /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		9C3515D225ED7984002947EC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		9C3515D425ED7985002947EC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		9C3515D725ED7985002947EC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		9C3515D925ED7985002947EC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -76,6 +96,96 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		9C0579EF25EF13D7004BFFCB /* Coordinator */ = {
+			isa = PBXGroup;
+			children = (
+				9C057A0325EF1448004BFFCB /* MainCoordinator.swift */,
+				9C057A0E25EF1500004BFFCB /* Coordinator.swift */,
+			);
+			path = Coordinator;
+			sourceTree = "<group>";
+		};
+		9C057A1625EF1783004BFFCB /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				9C057A5425EF1DBB004BFFCB /* Cell */,
+				9C057A1725EF17A4004BFFCB /* BooksListCollectionViewController.swift */,
+				9C057A3D25EF1933004BFFCB /* BooksListCollectionViewController.storyboard */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+		9C057A1C25EF17B3004BFFCB /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				9C057A1D25EF17C3004BFFCB /* BooksListViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		9C057A2225EF17C8004BFFCB /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				9C057A2325EF17D7004BFFCB /* BooksList.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		9C057A2825EF1836004BFFCB /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				9C057A2925EF1845004BFFCB /* BooksListProtocol.swift */,
+			);
+			path = Protocols;
+			sourceTree = "<group>";
+		};
+		9C057A2E25EF186A004BFFCB /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				9C057A2F25EF187A004BFFCB /* BooksListAPIService.swift */,
+				9C057A3025EF187A004BFFCB /* BooksListService.swift */,
+			);
+			path = Service;
+			sourceTree = "<group>";
+		};
+		9C057A3625EF18B0004BFFCB /* Book List */ = {
+			isa = PBXGroup;
+			children = (
+				9C057A8225EF20F2004BFFCB /* Coordinator */,
+				9C057A2E25EF186A004BFFCB /* Service */,
+				9C057A2825EF1836004BFFCB /* Protocols */,
+				9C057A2225EF17C8004BFFCB /* Model */,
+				9C057A1C25EF17B3004BFFCB /* ViewModel */,
+				9C057A1625EF1783004BFFCB /* ViewController */,
+			);
+			path = "Book List";
+			sourceTree = "<group>";
+		};
+		9C057A5425EF1DBB004BFFCB /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				9C057A6025EF1DF0004BFFCB /* BooksListCollectionViewCell.swift */,
+				9C057A6125EF1DF0004BFFCB /* BooksListCollectionViewCell.xib */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
+		9C057A8225EF20F2004BFFCB /* Coordinator */ = {
+			isa = PBXGroup;
+			children = (
+				9C057A8325EF2105004BFFCB /* BooksListCoordinator.swift */,
+			);
+			path = Coordinator;
+			sourceTree = "<group>";
+		};
+		9C057A8825EF2152004BFFCB /* Feature */ = {
+			isa = PBXGroup;
+			children = (
+				9C057A3625EF18B0004BFFCB /* Book List */,
+			);
+			path = Feature;
+			sourceTree = "<group>";
+		};
 		9C3515BF25ED7984002947EC = {
 			isa = PBXGroup;
 			children = (
@@ -101,8 +211,8 @@
 			children = (
 				9C3515CB25ED7984002947EC /* AppDelegate.swift */,
 				9C3515CD25ED7984002947EC /* SceneDelegate.swift */,
-				9C3515CF25ED7984002947EC /* ViewController.swift */,
-				9C3515D125ED7984002947EC /* Main.storyboard */,
+				9C0579EF25EF13D7004BFFCB /* Coordinator */,
+				9C057A8825EF2152004BFFCB /* Feature */,
 				9C3515D425ED7985002947EC /* Assets.xcassets */,
 				9C3515D625ED7985002947EC /* LaunchScreen.storyboard */,
 				9C3515D925ED7985002947EC /* Info.plist */,
@@ -232,9 +342,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9C057A3E25EF1933004BFFCB /* BooksListCollectionViewController.storyboard in Resources */,
 				9C3515D825ED7985002947EC /* LaunchScreen.storyboard in Resources */,
 				9C3515D525ED7985002947EC /* Assets.xcassets in Resources */,
-				9C3515D325ED7984002947EC /* Main.storyboard in Resources */,
+				9C057A6325EF1DF0004BFFCB /* BooksListCollectionViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -280,7 +391,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9C3515D025ED7984002947EC /* ViewController.swift in Sources */,
+				9C057A2A25EF1845004BFFCB /* BooksListProtocol.swift in Sources */,
+				9C057A1E25EF17C3004BFFCB /* BooksListViewModel.swift in Sources */,
+				9C057A6225EF1DF0004BFFCB /* BooksListCollectionViewCell.swift in Sources */,
+				9C057A1825EF17A4004BFFCB /* BooksListCollectionViewController.swift in Sources */,
+				9C057A0425EF1448004BFFCB /* MainCoordinator.swift in Sources */,
+				9C057A3125EF187A004BFFCB /* BooksListAPIService.swift in Sources */,
+				9C057A2425EF17D7004BFFCB /* BooksList.swift in Sources */,
+				9C057A8425EF2105004BFFCB /* BooksListCoordinator.swift in Sources */,
+				9C057A0F25EF1500004BFFCB /* Coordinator.swift in Sources */,
+				9C057A3225EF187A004BFFCB /* BooksListService.swift in Sources */,
 				9C3515CC25ED7984002947EC /* AppDelegate.swift in Sources */,
 				9C3515CE25ED7984002947EC /* SceneDelegate.swift in Sources */,
 			);
@@ -318,14 +438,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		9C3515D125ED7984002947EC /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				9C3515D225ED7984002947EC /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		9C3515D625ED7985002947EC /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
