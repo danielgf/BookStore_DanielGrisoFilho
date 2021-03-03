@@ -56,9 +56,7 @@ platform :ios do
   lane :run_swiftlint do
     swiftlint(
       mode: :lint,
-      config_file: ".swiftlint.yml",
-      raise_if_swiftlint_error: true,
-      ignore_exit_status: false,
+      config_file: ".swiftlint.yml"
     )
   end
 
