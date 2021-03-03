@@ -1,0 +1,81 @@
+{
+    "kind": "books#volumes",
+    "totalItems": 386,
+    "items": [
+        {
+            "kind": "books#volume",
+            "id": "x5r-DwAAQBAJ",
+            "etag": "ngn4mQXU7aw",
+            "selfLink": "https://www.googleapis.com/books/v1/volumes/x5r-DwAAQBAJ",
+            "volumeInfo": {
+                "title": "iOS 14 Programming Fundamentals with Swift",
+                "authors": [
+                    "Matt Neuburg"
+                ],
+                "publisher": "O'Reilly Media",
+                "publishedDate": "2020-09-23",
+                "description": "Move into iOS development by getting a firm grasp of its fundamentals, including the Xcode 12 IDE, Cocoa Touch, and the latest version of Apple’s acclaimed programming language, Swift 5.3. With this thoroughly updated guide, you’ll learn the Swift language, understand Apple’s Xcode development tools, and discover the Cocoa framework. Become familiar with built-in Swift types Dive deep into Swift objects, protocols, and generics Tour the life cycle of an Xcode project Learn how nibs are loaded Understand Cocoa’s event-driven design Communicate with C and Objective-C In this edition, catch up on the latest iOS programming features: Multiple trailing closures Code editor document tabs New Simulator features Resources in Swift packages Logging and testing improvements And more! Once you master the fundamentals, you’ll be ready to tackle the details of iOS app development with author Matt Neuburg’s companion guide, Programming iOS 14.",
+                "industryIdentifiers": [
+                    {
+                        "type": "ISBN_13",
+                        "identifier": "9781492092063"
+                    },
+                    {
+                        "type": "ISBN_10",
+                        "identifier": "1492092061"
+                    }
+                ],
+                "readingModes": {
+                    "text": false,
+                    "image": true
+                },
+                "pageCount": 708,
+                "printType": "BOOK",
+                "categories": [
+                    "Computers"
+                ],
+                "averageRating": 5,
+                "ratingsCount": 1,
+                "maturityRating": "NOT_MATURE",
+                "allowAnonLogging": false,
+                "contentVersion": "preview-1.0.0",
+                "panelizationSummary": {
+                    "containsEpubBubbles": false,
+                    "containsImageBubbles": false
+                },
+                "imageLinks": {
+                    "smallThumbnail": "http://books.google.com/books/content?id=x5r-DwAAQBAJ&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api",
+                    "thumbnail": "http://books.google.com/books/content?id=x5r-DwAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api"
+                },
+                "language": "en",
+                "previewLink": "http://books.google.com.br/books?id=x5r-DwAAQBAJ&pg=PA426&dq=ios&hl=&cd=1&source=gbs_api",
+                "infoLink": "http://books.google.com.br/books?id=x5r-DwAAQBAJ&dq=ios&hl=&source=gbs_api",
+                "canonicalVolumeLink": "https://books.google.com/books/about/iOS_14_Programming_Fundamentals_with_Swi.html?hl=&id=x5r-DwAAQBAJ"
+            },
+            "saleInfo": {
+                "country": "BR",
+                "saleability": "NOT_FOR_SALE",
+                "isEbook": false
+            },
+            "accessInfo": {
+                "country": "BR",
+                "viewability": "PARTIAL",
+                "embeddable": true,
+                "publicDomain": false,
+                "textToSpeechPermission": "ALLOWED",
+                "epub": {
+                    "isAvailable": false
+                },
+                "pdf": {
+                    "isAvailable": false
+                },
+                "webReaderLink": "http://play.google.com/books/reader?id=x5r-DwAAQBAJ&hl=&printsec=frontcover&source=gbs_api",
+                "accessViewStatus": "SAMPLE",
+                "quoteSharingAllowed": false
+            },
+            "searchInfo": {
+                "textSnippet": "Within such a method, you don&#39;t need the availability check, because you&#39;ve <br>\nalready guaranteed that this method won&#39;t run on a system earlier than <b>iOS</b> 14. A <br>\ncase in point is the built-in <b>iOS</b> App template. This template is not very backward<br>\n&nbsp;..."
+            }
+        }
+    ]
+}
