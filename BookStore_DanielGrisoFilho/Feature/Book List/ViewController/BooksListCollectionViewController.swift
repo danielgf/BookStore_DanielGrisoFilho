@@ -9,7 +9,7 @@
 
 import UIKit
 
-class BooksListCollectionViewController: UICollectionViewController {
+class BooksListCollectionViewController: UICollectionViewController, UICollectionViewDelegateFlowLayout {
     
     static let classIdentifier = "\(BooksListCollectionViewController.self)"
     
@@ -62,6 +62,20 @@ class BooksListCollectionViewController: UICollectionViewController {
         cell.book = viewModel?.itemFor(row: indexPath.row)
         return cell
     }
+    
+    func collectionView(_ collectionView: UICollectionView,
+                        layout collectionViewLayout: UICollectionViewLayout,
+                        insetForSectionAt section: Int) -> UIEdgeInsets {
+
+        return UIEdgeInsets(top: 10, left: 10, bottom: 10, right: 10)
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+            let padding: CGFloat =  60
+            let collectionViewSize = collectionView.frame.size.width - padding
+
+            return CGSize(width: collectionViewSize/2, height: collectionViewSize/2)
+        }
 }
 // MARK: - Conforming to BooksListViewModelViewDelegate protocol
 extension BooksListCollectionViewController: BooksListViewModelViewDelegate {
