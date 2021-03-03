@@ -18,41 +18,45 @@ class BooksListViewModel {
     // MARK: - Properties
     let service: BooksListService
     
-    fileprivate var books: [BooksList] = []
-    
-    fileprivate var isLoading = false
+    fileprivate var books: BooksList = BooksList()
     
     // MARK: - Init
     init(service: BooksListService = BooksListService()) {
         self.service = service
     }
     
-    func start() {
-        getModel()
+    func start(page: Int) {
+        getModel(page: page)
     }
     
     // MARK: - Network
     
-    func getModel() {
-        
-        viewDelegate?.updateScreen()
+    func getModel(page: Int) {
+        service.fetchBooks(endPoint: "books", page: page) { (result) in
+            switch result {
+            case .success(let book):
+                self.books = book
+                self.viewDelegate?.updateScreen()
+            case .failure(let error):
+                self.viewDelegate?.showError(error: error)
+            }
+        }
     }
-    
 }
 
 extension BooksListViewModel: BooksListViewModelType {
     
     func numberOfItems() -> Int {
-        return isLoading ? books.count : 0
+        return books.items?.count ?? 0
     }
     
-    func itemFor(row: Int) -> BooksList {
-        let item = isLoading ? books[row] : BooksList()
-        return item
+    func itemFor(row: Int) -> Books {
+        let item = books.items?[row]
+        return item ?? Books()
     }
     
     func didSelectRow(_ row: Int, from controller: UIViewController) {
-        let bookSelected = books[row]
+        let bookSelected = books.items?[row] ?? Books()
         coordinatorDelegate?.didSelect(model: bookSelected, from: controller)
     }
     

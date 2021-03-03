@@ -21,11 +21,11 @@ protocol BooksListViewModelType: AnyObject {
     
     /// This function will show the item in a specific location on your ViewModel
     /// - Parameter row: Need to receive the index from your object
-    func itemFor(row: Int) -> BooksList
+    func itemFor(row: Int) -> Books
     
     /// Events
     
-    func start()
+    func start(page: Int)
     
     /// This function is used when the user select an row
     /// - Parameters:
@@ -45,6 +45,7 @@ protocol BooksListViewModelType: AnyObject {
 /// So we have a delegate which is set by the view controller to itself when the ViewModel gets injected into it.
 protocol BooksListViewModelViewDelegate: AnyObject {
     func updateScreen()
+    func showError(error: Error)
 }
 
 /// This delegate protocol will let us bubble up any action’s that we can’t handle and must be handled by our coordinator.
@@ -55,7 +56,7 @@ protocol BooksListViewModelCoordinatorDelegate: AnyObject {
     /// - Parameters:
     ///   - model: Need to receive the model information from the object
     ///   - controller: Need to receive the viewController
-    func didSelect(model: BooksList,
+    func didSelect(model: Books,
                    from controller: UIViewController)
     
     /// When close an object this function will be triged
