@@ -14,6 +14,7 @@ import UIKit
 /// and the Events which are events that the ViewController will send up to us on any user action.
 protocol BooksListViewModelType: AnyObject {
     var viewDelegate: BooksListViewModelViewDelegate? { get set }
+    var coordinatorDelegate: BooksListViewModelCoordinatorDelegate? { get set }
     /// Data Source
     
     /// This function will return the numbers of items you have on your ViewModel

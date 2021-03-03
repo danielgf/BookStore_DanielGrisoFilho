@@ -27,6 +27,9 @@
 		9C87217B25EFBDB4004ABFA8 /* BooksListCoordinatorSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C87217A25EFBDB4004ABFA8 /* BooksListCoordinatorSpec.swift */; };
 		9C87218325EFBEF2004ABFA8 /* BooksListServiceSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C87218225EFBEF2004ABFA8 /* BooksListServiceSpec.swift */; };
 		9C87219325EFC193004ABFA8 /* BooksListMock.json in Resources */ = {isa = PBXBuildFile; fileRef = 9C87217125EFBD55004ABFA8 /* BooksListMock.json */; };
+		9C8721A325EFD779004ABFA8 /* BooksListViewModelSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C8721A225EFD779004ABFA8 /* BooksListViewModelSpec.swift */; };
+		9C8721AC25EFF1FF004ABFA8 /* BooksListCollectionViewControllerSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C8721AB25EFF1FF004ABFA8 /* BooksListCollectionViewControllerSpec.swift */; };
+		9C8721B525EFF50B004ABFA8 /* BooksListCollectionViewCellSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C8721B425EFF50B004ABFA8 /* BooksListCollectionViewCellSpec.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -73,6 +76,9 @@
 		9C87217125EFBD55004ABFA8 /* BooksListMock.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = BooksListMock.json; sourceTree = "<group>"; };
 		9C87217A25EFBDB4004ABFA8 /* BooksListCoordinatorSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BooksListCoordinatorSpec.swift; sourceTree = "<group>"; };
 		9C87218225EFBEF2004ABFA8 /* BooksListServiceSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BooksListServiceSpec.swift; sourceTree = "<group>"; };
+		9C8721A225EFD779004ABFA8 /* BooksListViewModelSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BooksListViewModelSpec.swift; sourceTree = "<group>"; };
+		9C8721AB25EFF1FF004ABFA8 /* BooksListCollectionViewControllerSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BooksListCollectionViewControllerSpec.swift; sourceTree = "<group>"; };
+		9C8721B425EFF50B004ABFA8 /* BooksListCollectionViewCellSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BooksListCollectionViewCellSpec.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -252,6 +258,8 @@
 		9C87217725EFBD6F004ABFA8 /* Book List */ = {
 			isa = PBXGroup;
 			children = (
+				9C8721AA25EFF003004ABFA8 /* ViewController */,
+				9C8721A125EFD768004ABFA8 /* ViewModel */,
 				9C87217925EFBD7A004ABFA8 /* Coordinator */,
 				9C87217825EFBD75004ABFA8 /* Service */,
 			);
@@ -282,6 +290,31 @@
 				9C87217125EFBD55004ABFA8 /* BooksListMock.json */,
 			);
 			path = "Support Files";
+			sourceTree = "<group>";
+		};
+		9C8721A125EFD768004ABFA8 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				9C8721A225EFD779004ABFA8 /* BooksListViewModelSpec.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		9C8721AA25EFF003004ABFA8 /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				9C8721B325EFF500004ABFA8 /* Cell */,
+				9C8721AB25EFF1FF004ABFA8 /* BooksListCollectionViewControllerSpec.swift */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+		9C8721B325EFF500004ABFA8 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				9C8721B425EFF50B004ABFA8 /* BooksListCollectionViewCellSpec.swift */,
+			);
+			path = Cell;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -457,8 +490,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9C8721A325EFD779004ABFA8 /* BooksListViewModelSpec.swift in Sources */,
 				9C87217B25EFBDB4004ABFA8 /* BooksListCoordinatorSpec.swift in Sources */,
+				9C8721AC25EFF1FF004ABFA8 /* BooksListCollectionViewControllerSpec.swift in Sources */,
 				9C87218325EFBEF2004ABFA8 /* BooksListServiceSpec.swift in Sources */,
+				9C8721B525EFF50B004ABFA8 /* BooksListCollectionViewCellSpec.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
