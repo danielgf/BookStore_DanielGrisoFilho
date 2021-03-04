@@ -11,11 +11,11 @@ import UIKit
 
 class BooksListCoordinator: Coordinator, BooksListViewModelCoordinatorDelegate {
     
-    var viewModel: BooksListViewModelType? {
-        didSet {
-            viewModel?.coordinatorDelegate = self
-        }
-    }
+    lazy var booksViewModel: BooksListViewModel = {
+        let viewModel = BooksListViewModel()
+        viewModel.coordinatorDelegate = self
+        return viewModel
+    }()
     
     var navigationController: UINavigationController?
     
@@ -30,15 +30,21 @@ class BooksListCoordinator: Coordinator, BooksListViewModelCoordinatorDelegate {
                                                                     BooksListCollectionViewController
                                                                     .classIdentifier)
             as BooksListCollectionViewController
-        viewController.viewModel = BooksListViewModel()
-        viewController.viewModel?.coordinatorDelegate = viewModel?.coordinatorDelegate
+        viewController.viewModel = booksViewModel
         navigationController?
             .pushViewController(viewController,
                                 animated: true)
     }
     
     func didSelect(model: Books, from controller: UIViewController) {
-        
+        let storyboard = UIStoryboard(name: BookDetailsViewController.classIdentifier,
+                                      bundle: nil)
+        let viewController = storyboard.instantiateViewController(identifier:
+                                                                    BookDetailsViewController
+                                                                    .classIdentifier)
+            as BookDetailsViewController
+        viewController.book = model
+        controller.showDetailViewController(viewController, sender: nil)
     }
     
     func didSelectClose(from viewModel: BooksListViewModel, from controller: UIViewController) {

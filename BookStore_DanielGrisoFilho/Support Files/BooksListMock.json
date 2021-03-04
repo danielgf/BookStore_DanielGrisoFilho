@@ -55,7 +55,8 @@
             "saleInfo": {
                 "country": "BR",
                 "saleability": "NOT_FOR_SALE",
-                "isEbook": false
+                "isEbook": false,
+                "buyLink": ""
             },
             "accessInfo": {
                 "country": "BR",
