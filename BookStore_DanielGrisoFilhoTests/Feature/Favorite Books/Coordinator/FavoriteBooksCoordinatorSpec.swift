@@ -1,19 +1,20 @@
 //
-//  BooksListCoordinatorSpec.swift
+//  FavoriteBooksCoordinatorSpec.swift
 //  BookStore_DanielGrisoFilhoTests
 //
-//  Created by Daniel Griso Filho on 03/03/21.
+//  Created by Daniel Griso Filho on 04/03/21.
 //
 
 import XCTest
 @testable import BookStore_DanielGrisoFilho
 
-class BooksListCoordinatorSpec: XCTestCase {
+class FavoriteBooksCoordinatorSpec: XCTestCase {
+    
+    var coordinatorMock: FavoriteBooksCoordinatorMock?
 
-    var coordinatorMock: BooksListCoordinatorMock?
     override func setUpWithError() throws {
         // Put setup code here. This method is called before the invocation of each test method in the class.
-        coordinatorMock = BooksListCoordinatorMock(navigationController: UINavigationController())
+        coordinatorMock = FavoriteBooksCoordinatorMock(navigationController: UINavigationController())
     }
 
     override func tearDownWithError() throws {
@@ -44,9 +45,10 @@ class BooksListCoordinatorSpec: XCTestCase {
         XCTAssertTrue(called)
         XCTAssertEqual(called, true)
     }
+
 }
 
-class BooksListCoordinatorMock: Coordinator, BooksListViewModelCoordinatorDelegate {
+class FavoriteBooksCoordinatorMock: Coordinator, BooksListViewModelCoordinatorDelegate {
     var navigationController: UINavigationController?
     var startCalled = false
     var didSelectCalled = false

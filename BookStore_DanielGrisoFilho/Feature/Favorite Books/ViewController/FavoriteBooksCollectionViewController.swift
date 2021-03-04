@@ -1,33 +1,35 @@
 //
-//  BooksListCollectionViewController.swift
+//  FavoriteBooksCollectionViewController.swift
 //  BookStore_DanielGrisoFilho
 //
-//  Created by Daniel Griso Filho on 02/03/21.
+//  Created by Daniel Griso Filho on 03/03/21.
 //
 //  All rights reserved.
 //
 
 import UIKit
 
-class BooksListCollectionViewController: UICollectionViewController, UICollectionViewDelegateFlowLayout {
+class FavoriteBooksViewController: UICollectionViewController, UICollectionViewDelegateFlowLayout {
     
     // MARK: - Variables and Properties
-    static let classIdentifier = "\(BooksListCollectionViewController.self)"
+    static let classIdentifier = "\(FavoriteBooksViewController.self)"
     
-    var viewModel: BooksListViewModelType? {
+    var viewModel: FavoriteBooksViewModelType? {
         didSet {
             viewModel?.viewDelegate = self
         }
     }
-    var requestPage = 0
     
     // MARK: - Life cycle
-        
     override func viewDidLoad() {
         super.viewDidLoad()
-        fetchBooks(page: requestPage)
         setupNavigationBar()
         registerCells()
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        viewModel?.start()
     }
     
     private func registerCells() {
@@ -38,11 +40,7 @@ class BooksListCollectionViewController: UICollectionViewController, UICollectio
     }
     
     private func setupNavigationBar() {
-        title = "Book Store"
-    }
-    
-    private func fetchBooks(page: Int) {
-        viewModel?.start(page: requestPage)
+        title = "Favorite Books"
     }
     
     // MARK: - UICollectionViewDataSource
@@ -81,32 +79,15 @@ class BooksListCollectionViewController: UICollectionViewController, UICollectio
         return CGSize(width: collectionViewSize/2, height: collectionViewSize/2)
     }
     
-    override func collectionView(_ collectionView: UICollectionView, willDisplay cell: UICollectionViewCell, forItemAt indexPath: IndexPath) {
-        if indexPath.row + 3 == viewModel?.numberOfItems() {
-            requestPage += 1
-            fetchBooks(page: requestPage)
-        }
-    }
-    
     override func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         viewModel?.didSelectRow(indexPath.row, from: self)
     }
 }
-// MARK: - Conforming to BooksListViewModelViewDelegate protocol
-extension BooksListCollectionViewController: BooksListViewModelViewDelegate {
+// MARK: - Conforming to FavoriteBooksViewModelViewDelegate protocol
+extension FavoriteBooksViewController: FavoriteBooksViewModelViewDelegate {
     func updateScreen() {
         DispatchQueue.main.async {
             self.collectionView.reloadData()
-        }
-    }
-    
-    func showError(error: Error) {
-        let alert = UIAlertController(title: "Ops, something went wrong",
-                                      message: error.localizedDescription,
-                                      preferredStyle: .alert)
-        alert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
-        DispatchQueue.main.async {
-            self.present(alert, animated: true, completion: nil)
         }
     }
 }

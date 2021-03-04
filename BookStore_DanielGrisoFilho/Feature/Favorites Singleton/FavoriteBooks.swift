@@ -24,9 +24,7 @@ class FavoriteBooks {
     }
     
     func removeBookAsFavorite(_ book: Books?) {
-        for index in 0..<favoriteBooks.count - 1 where book?.id == favoriteBooks[index].id {
-            favoriteBooks.remove(at: index)
-        }
+        favoriteBooks.removeAll(where: { return $0.id == book?.id })
         print(favoriteBooks.count)
         favoriteBooks.forEach({ print($0.id ?? "")})
     }
