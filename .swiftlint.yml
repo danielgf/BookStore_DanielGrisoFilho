@@ -1,0 +1,89 @@
+# rule identifiers to exclude from running
+disabled_rules: 
+  - colon
+  - comma
+  - control_statement
+  - unused_optional_binding
+  - for_where
+
+# active some rules are only opt-in
+opt_in_rules:
+  - empty_count
+  # Find all the available rules by running:
+  # swiftlint rules
+
+ # paths to include during linting. `--path` is ignored if present.
+included:
+  - ./
+
+ # paths to ignore during linting. Takes precedence over `included`.
+excluded:
+  - Carthage
+  - Pods
+# Rules run by `swiftlint analyze` (experimental)
+analyzer_rules:
+  - explicit_self
+
+# configurable rules can be customized from this configuration file
+# binary rules can set their severity level
+
+# Force should be avoided.
+force_cast: error # implicitly
+force_try:
+  severity: error # explicitly
+
+# rules that have both warning and error levels, can set just the warning level
+
+#Lines should not span too many characters.
+line_length:
+  warning: 120
+  error: 200
+  ignores_comments: true
+  ignores_urls: true
+  ignores_function_declarations: true
+
+# they can set both implicitly with an array
+# Type bodies should not span too many lines.
+type_body_length:
+  - 150 # warning
+  - 300 # error
+
+# or they can set both explicitly
+# Files should not span too many lines.
+file_length:
+  warning: 250
+  error: 500
+
+# naming rules can set warnings/errors for min_length and max_length
+# additionally they can set excluded names
+# Type name should only contain alphanumeric characters, start with an uppercase character and span between 3 and 40 characters in length.
+type_name:
+  min_length: 4 # only warning
+  max_length: # warning and error
+    warning: 40
+    error: 50
+  excluded: iPhone # excluded via string
+  allowed_symbols: ["_"] # these are allowed in type names
+
+# Identifier names should only contain alphanumeric characters and start with a lowercase character 
+# or should only contain capital letters. In an exception to the above, variable names may start with 
+# a capital letter when they are declared static and immutable. Variable names should not be too long 
+# or too short.
+identifier_name:
+  min_length: # only min_length
+    error: 2 # only error
+  max_length:
+    warning: 30
+    error: 45
+  excluded: # excluded via string array
+    - id
+    - URL
+    - GlobalAPIKey
+    - aux
+
+# Lines should not have trailing whitespace.
+trailing_whitespace:
+  ignores_empty_lines: true
+
+# reporter type (xcode, json, csv, checkstyle, junit, html, emoji, sonarqube, markdown) 
+reporter: "xcode"

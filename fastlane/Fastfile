@@ -1,0 +1,63 @@
+# This file contains the fastlane.tools configuration
+# You can find the documentation at https://docs.fastlane.tools
+#
+# For a list of all available actions, check out
+#
+#     https://docs.fastlane.tools/actions
+#
+# For a list of all available plugins, check out
+#
+#     https://docs.fastlane.tools/plugins/available-plugins
+#
+
+# Uncomment the line if you want fastlane to automatically update itself
+# update_fastlane
+
+default_platform(:ios)
+
+platform :ios do
+  desc "This lane will buid our app for development"
+  lane :development do
+
+    clear_derived_data
+    gym(
+      project: "BookStore_DanielGrisoFilho.xcodeproj",
+      configuration: "Debug",
+      scheme: "BookStore_DanielGrisoFilho",
+      silent: true,
+      clean: true,
+      skip_package_ipa: true,
+      skip_codesigning: true,
+    )
+  end
+  
+  desc "This lane will build for unit tests our app"
+  lane :tests do
+    scan( 
+      project: "BookStore_DanielGrisoFilho.xcodeproj",
+      scheme: "#BookStore_DanielGrisoFilho",
+      device: "iPhone 11",
+      code_coverage: true,
+      skip_slack: true,
+    )
+    run_slather
+    run_swiftlint
+  end
+
+  desc "Slather"
+  lane :run_slather do
+    slather(
+      proj: "BookStore_DanielGrisoFilho.xcodeproj",
+      scheme: "BookStore_DanielGrisoFilho",
+    )
+  end
+
+  desc "SwiftLint"
+  lane :run_swiftlint do
+    swiftlint(
+      mode: :lint,
+      config_file: ".swiftlint.yml"
+    )
+  end
+
+end
