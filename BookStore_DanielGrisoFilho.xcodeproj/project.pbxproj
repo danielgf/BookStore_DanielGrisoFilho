@@ -30,6 +30,10 @@
 		9C8721A325EFD779004ABFA8 /* BooksListViewModelSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C8721A225EFD779004ABFA8 /* BooksListViewModelSpec.swift */; };
 		9C8721AC25EFF1FF004ABFA8 /* BooksListCollectionViewControllerSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C8721AB25EFF1FF004ABFA8 /* BooksListCollectionViewControllerSpec.swift */; };
 		9C8721B525EFF50B004ABFA8 /* BooksListCollectionViewCellSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C8721B425EFF50B004ABFA8 /* BooksListCollectionViewCellSpec.swift */; };
+		9C9DAD7225F066A3006A8695 /* FavoriteBooks.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C9DAD7125F066A3006A8695 /* FavoriteBooks.swift */; };
+		9C9DAD7B25F07AEE006A8695 /* BookDetailsViewControllerSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C9DAD7A25F07AEE006A8695 /* BookDetailsViewControllerSpec.swift */; };
+		9CA630A225F024CF00897D3D /* BookDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CA630A125F024CF00897D3D /* BookDetailsViewController.swift */; };
+		9CA630AA25F0258C00897D3D /* BookDetailsViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9CA630A925F0258C00897D3D /* BookDetailsViewController.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -79,6 +83,10 @@
 		9C8721A225EFD779004ABFA8 /* BooksListViewModelSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BooksListViewModelSpec.swift; sourceTree = "<group>"; };
 		9C8721AB25EFF1FF004ABFA8 /* BooksListCollectionViewControllerSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BooksListCollectionViewControllerSpec.swift; sourceTree = "<group>"; };
 		9C8721B425EFF50B004ABFA8 /* BooksListCollectionViewCellSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BooksListCollectionViewCellSpec.swift; sourceTree = "<group>"; };
+		9C9DAD7125F066A3006A8695 /* FavoriteBooks.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteBooks.swift; sourceTree = "<group>"; };
+		9C9DAD7A25F07AEE006A8695 /* BookDetailsViewControllerSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookDetailsViewControllerSpec.swift; sourceTree = "<group>"; };
+		9CA630A125F024CF00897D3D /* BookDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookDetailsViewController.swift; sourceTree = "<group>"; };
+		9CA630A925F0258C00897D3D /* BookDetailsViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = BookDetailsViewController.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -191,6 +199,8 @@
 		9C057A8825EF2152004BFFCB /* Feature */ = {
 			isa = PBXGroup;
 			children = (
+				9C9DAD7025F0666C006A8695 /* Favorites Singleton */,
+				9CA6309725F0237A00897D3D /* Book Details */,
 				9C057A3625EF18B0004BFFCB /* Book List */,
 			);
 			path = Feature;
@@ -250,6 +260,7 @@
 		9C87217625EFBD65004ABFA8 /* Feature */ = {
 			isa = PBXGroup;
 			children = (
+				9C9DAD7925F07ADC006A8695 /* Book Detais */,
 				9C87217725EFBD6F004ABFA8 /* Book List */,
 			);
 			path = Feature;
@@ -315,6 +326,39 @@
 				9C8721B425EFF50B004ABFA8 /* BooksListCollectionViewCellSpec.swift */,
 			);
 			path = Cell;
+			sourceTree = "<group>";
+		};
+		9C9DAD7025F0666C006A8695 /* Favorites Singleton */ = {
+			isa = PBXGroup;
+			children = (
+				9C9DAD7125F066A3006A8695 /* FavoriteBooks.swift */,
+			);
+			path = "Favorites Singleton";
+			sourceTree = "<group>";
+		};
+		9C9DAD7925F07ADC006A8695 /* Book Detais */ = {
+			isa = PBXGroup;
+			children = (
+				9C9DAD7A25F07AEE006A8695 /* BookDetailsViewControllerSpec.swift */,
+			);
+			path = "Book Detais";
+			sourceTree = "<group>";
+		};
+		9CA6309725F0237A00897D3D /* Book Details */ = {
+			isa = PBXGroup;
+			children = (
+				9CA630A025F024BC00897D3D /* ViewController */,
+			);
+			path = "Book Details";
+			sourceTree = "<group>";
+		};
+		9CA630A025F024BC00897D3D /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				9CA630A125F024CF00897D3D /* BookDetailsViewController.swift */,
+				9CA630A925F0258C00897D3D /* BookDetailsViewController.storyboard */,
+			);
+			path = ViewController;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -422,6 +466,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				9C057A3E25EF1933004BFFCB /* BooksListCollectionViewController.storyboard in Resources */,
+				9CA630AA25F0258C00897D3D /* BookDetailsViewController.storyboard in Resources */,
 				9C3515D825ED7985002947EC /* LaunchScreen.storyboard in Resources */,
 				9C3515D525ED7985002947EC /* Assets.xcassets in Resources */,
 				9C057A6325EF1DF0004BFFCB /* BooksListCollectionViewCell.xib in Resources */,
@@ -473,6 +518,7 @@
 			files = (
 				9C057A2A25EF1845004BFFCB /* BooksListProtocol.swift in Sources */,
 				9C057A1E25EF17C3004BFFCB /* BooksListViewModel.swift in Sources */,
+				9CA630A225F024CF00897D3D /* BookDetailsViewController.swift in Sources */,
 				9C057A6225EF1DF0004BFFCB /* BooksListCollectionViewCell.swift in Sources */,
 				9C057A1825EF17A4004BFFCB /* BooksListCollectionViewController.swift in Sources */,
 				9C057A0425EF1448004BFFCB /* MainCoordinator.swift in Sources */,
@@ -480,6 +526,7 @@
 				9C057A2425EF17D7004BFFCB /* BooksList.swift in Sources */,
 				9C057A8425EF2105004BFFCB /* BooksListCoordinator.swift in Sources */,
 				9C057A0F25EF1500004BFFCB /* Coordinator.swift in Sources */,
+				9C9DAD7225F066A3006A8695 /* FavoriteBooks.swift in Sources */,
 				9C057A3225EF187A004BFFCB /* BooksListService.swift in Sources */,
 				9C3515CC25ED7984002947EC /* AppDelegate.swift in Sources */,
 				9C3515CE25ED7984002947EC /* SceneDelegate.swift in Sources */,
@@ -493,6 +540,7 @@
 				9C8721A325EFD779004ABFA8 /* BooksListViewModelSpec.swift in Sources */,
 				9C87217B25EFBDB4004ABFA8 /* BooksListCoordinatorSpec.swift in Sources */,
 				9C8721AC25EFF1FF004ABFA8 /* BooksListCollectionViewControllerSpec.swift in Sources */,
+				9C9DAD7B25F07AEE006A8695 /* BookDetailsViewControllerSpec.swift in Sources */,
 				9C87218325EFBEF2004ABFA8 /* BooksListServiceSpec.swift in Sources */,
 				9C8721B525EFF50B004ABFA8 /* BooksListCollectionViewCellSpec.swift in Sources */,
 			);

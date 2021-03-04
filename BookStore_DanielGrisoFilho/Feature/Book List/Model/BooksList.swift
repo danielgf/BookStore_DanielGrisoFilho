@@ -75,6 +75,7 @@ struct SaleInfo: Codable {
     var country: String?
     var saleability: String?
     var isEbook: Bool?
+    var buyLink: String?
 }
 
 struct AccessInfo: Codable {

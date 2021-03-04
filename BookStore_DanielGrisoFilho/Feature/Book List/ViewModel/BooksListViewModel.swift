@@ -12,7 +12,8 @@ import UIKit
 class BooksListViewModel {
     
     // MARK: - Delegates
-    weak var coordinatorDelegate: BooksListViewModelCoordinatorDelegate?
+    // swiftlint:disable:next weak_delegate
+    var coordinatorDelegate: BooksListViewModelCoordinatorDelegate?
     weak var viewDelegate: BooksListViewModelViewDelegate?
     
     // MARK: - Properties

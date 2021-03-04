@@ -50,12 +50,6 @@ class BooksListCoordinatorMock: Coordinator, BooksListViewModelCoordinatorDelega
     var didSelectCalled = false
     var didSelectCloseCalled = false
     
-    var viewModel: BooksListViewModelType? {
-        didSet {
-            viewModel?.coordinatorDelegate = self
-        }
-    }
-    
     required init(navigationController: UINavigationController) {
         self.navigationController = navigationController
     }

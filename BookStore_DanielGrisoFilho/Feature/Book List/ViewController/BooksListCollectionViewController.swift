@@ -88,6 +88,9 @@ class BooksListCollectionViewController: UICollectionViewController, UICollectio
         }
     }
     
+    override func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        viewModel?.didSelectRow(indexPath.row, from: self)
+    }
 }
 // MARK: - Conforming to BooksListViewModelViewDelegate protocol
 extension BooksListCollectionViewController: BooksListViewModelViewDelegate {
