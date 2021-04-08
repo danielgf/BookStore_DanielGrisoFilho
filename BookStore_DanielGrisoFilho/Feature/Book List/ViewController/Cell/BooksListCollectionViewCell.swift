@@ -22,6 +22,11 @@ class BooksListCollectionViewCell: UICollectionViewCell {
         // Initialization code
     }
     
+    override func prepareForReuse() {
+        super.prepareForReuse()
+        bookImage.image = nil
+    }
+    
     func updateCell() {
         if let url = URL(string: book?.volumeInfo?.imageLinks?.thumbnail ?? "") {
             DispatchQueue.global().async {

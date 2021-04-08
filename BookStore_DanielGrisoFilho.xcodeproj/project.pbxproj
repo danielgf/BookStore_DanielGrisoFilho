@@ -221,8 +221,8 @@
 		9C057A8825EF2152004BFFCB /* Feature */ = {
 			isa = PBXGroup;
 			children = (
-				9CF08A4425F0811B0095E837 /* Favorite Books */,
 				9C9DAD7025F0666C006A8695 /* Favorites Singleton */,
+				9CF08A4425F0811B0095E837 /* Favorite Books */,
 				9CA6309725F0237A00897D3D /* Book Details */,
 				9C057A3625EF18B0004BFFCB /* Book List */,
 			);
